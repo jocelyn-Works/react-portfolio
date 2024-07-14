@@ -1,0 +1,274 @@
+@import "../../vars.css";
+
+.container {
+  /* position: relative; */
+  /* background-color: rgba(80, 80, 80, 0.433); */
+  background-color: rgba(162, 160, 160, 0.433);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
+  border-radius: 15px;
+  padding: 40px;
+  z-index: 1;
+  margin: 4%;
+
+}
+
+
+
+.aboutImage{
+    width: 100%;
+    align-items: center;
+    /* z-index: 1; */
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin: 10px 0px 20px 0;
+}
+
+/* button  */
+
+/* button  */
+.cvButton {
+  position: relative;
+  width: 250px;
+  height: 70px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #17795E;
+  background-color: #209978;
+  overflow: hidden;
+  border: 1.5px solid var(--grey);
+  border-radius: 10px;
+}
+
+.cvButton, .buttonIcon, .buttonText {
+  transition: all 0.3s;
+}
+
+.cvButton .buttonText {
+  transform: translateX(22px);
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
+}
+
+.cvButton .buttonIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 45px;
+  background-color: #17795E;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cvButton .svg {
+  width: 30px;
+  margin-top: 25px;
+  align-items: center;
+  fill: #fff;
+}
+
+.cvButton:hover {
+  background: #17795E;
+}
+
+.cvButton:hover .buttonText {
+  color: transparent;
+}
+
+.cvButton:hover .buttonIcon {
+  width: 100%;
+  transform: translateX(0);
+}
+
+.cvButton:active .buttonIcon {
+  background-color: #146c54;
+}
+
+.cvButton:active {
+  border: 1px solid #146c54;
+}
+
+.cvLink {
+  text-decoration: none;
+}
+
+
+
+  /* ----------------------------------------------- */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 60px;
+}
+.content img{
+  width: 150px;
+  /* height:; */
+}
+.content svg{
+width: 130px;
+fill: var(--primary);
+margin-bottom: 2rem;
+}
+
+.contentimg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 10px 10rem;
+}
+.aboutImage {
+  width: 40%;
+  height: 40%;
+  
+}
+
+
+.aboutItems {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  list-style: none;
+  padding: 8px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(165, 215, 232, 0.42) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+.aboutItem:hover {
+  background-size: 100% 100%;
+}
+
+.aboutItem h3 {
+  box-sizing: border-box;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 5px 0px ;
+}
+
+.aboutItem p {
+  font-size: 25px;
+}
+.aboutItem li{
+  width: 100%;
+}
+.aboutlogo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    /* z-index: -1; */
+}
+.aboutlogo img{
+    max-width: 100px;
+    height: 100px;
+    object-fit: contain; 
+    margin: 5px 10px 5px 5px;
+    /* z-index: 1; */
+}
+
+@media screen and (max-width: 1024px) {
+  .contentimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 4px 3rem;
+  }
+  .aboutImage {
+    width: 25%;
+    height: 25%;
+    
+  }
+  .aboutlogo img{
+    max-width: 70px;
+    height: 70px;
+    object-fit: contain; 
+    margin: 5px 10px 5px 5px;
+}
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 40px;
+  /* z-index: 1; */
+  margin: 2%;
+    
+  }
+
+  .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contentimg{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  .contentimg a {
+    width:100%;
+    height: 100%;
+    /* margin: 0px 20px; */
+    /* align-items: center; */
+  }
+
+  .aboutItems {
+    margin-top: 29px;
+  }
+
+  .aboutItem {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .aboutlogo img {
+    max-width: 75px; 
+  }
+}
+@media screen and (max-width: 425px){
+  .aboutItem h3 {
+    font-size: 42px;
+    font-weight: 600;
+    margin:10px 2px ;
+  }
+  .aboutItem {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutlogo img {
+    max-width: 85px; 
+    height: 80px;
+    object-fit: contain; 
+    margin: 5px 5px 0;
+  }
+}

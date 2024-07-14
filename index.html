@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./assets/Me/Me.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="portfolio jocelyn">
+    <title>Jocelyn Grelier</title>
+    <script>
+      // check local storage 
+      let localS = localStorage.getItem('theme')
+      themeToSet = localS
+      console.log(themeToSet);
+      // verifie la preference par le systéme dexploitation 
+
+      if (!localS) {
+          themeToSet = window.matchMedia('(prefers-colo-scheme: dark)').matches ? 'dark' : 'light'
+      }
+      // le theme approprié
+      document.documentElement.setAttribute('data-theme', themeToSet)
+  </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

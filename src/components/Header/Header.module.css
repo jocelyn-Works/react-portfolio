@@ -1,0 +1,65 @@
+@import "../../vars.css";
+
+.navbar{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 61px;
+    z-index: 2;
+    margin: 0 10%;
+    
+}
+
+
+.themeSwitcher svg {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  transition: var(--default-transition);
+}
+.themeSwitcher {
+  background-color: var(--switch-bg);
+  border-radius: 50px;
+  box-shadow: var(--border-switcher);
+  display: flex;
+  align-items: center;
+  gap: 1.33rem;
+  cursor: pointer;
+  padding: 0.46rem;
+  position: relative;
+  transform: var(--default-border-radius);
+}
+.themeSwitcher::before {
+  content: "";
+  position: absolute;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: var(--switch-circle-bg);
+  border-radius: 50px;
+  z-index: 0;
+  left: 0;
+  top: -0px;
+  transform: translateX(var(--switch-circle-pos));
+  transition: var(--default-transition);
+}
+
+.iconSun {
+  fill: var(--icon-sun);
+}
+.iconMoon {
+  fill: var(--icon-moon);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  
+
+  
+}
