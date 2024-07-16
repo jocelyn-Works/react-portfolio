@@ -16,8 +16,12 @@
   --fonts-outfit:"outfit";
 
   /* svg */
-  --color-svg:orange;
+  --color-svg:#04152dba;
   --nav-color:rgba(252, 251, 251, 0.698);
+  --hover-nav:rgba(252, 251, 251, 0.304);
+ 
+
+  
   
  
 
@@ -47,8 +51,9 @@
 
 
     /* svg */
-    --color-svg:orange;
+    --color-svg:#e0e4ffbe;
     --nav-color:rgba(0, 0, 0, 0.698);
+    --hover-nav:#04152d6f;
 
   
 

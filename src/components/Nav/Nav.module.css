@@ -5,12 +5,12 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 85%;
-  
+  top: 75%;
+  z-index: 9999;
 }
 
 .navBar {
-  width: 25%;
+  width: 30%;
   height: 6vh;
   display: flex;
   flex-direction: row;
@@ -18,18 +18,60 @@
   align-items: center;
   border-radius: 40px;
   background-color: var(--color-nav);
-  /* padding: 5px; */
 }
 
 .navBar a {
+  position: relative;
   text-decoration: none;
   width: 50%;
   height: 50%;
-  fill: var(--nav-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.navBar a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 42%;
+  height: 150%;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.3s;
+}
+
+
+.navBar a.active::before {
+  background-color: var(--hover-nav); /* Couleur de la bordure */
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .navBar svg {
   width: 100%;
   height: 100%;
   fill: var(--nav-color);
+}
+
+@media screen and (max-width: 768px) {
+  .containNav {
+    top: 92%;
+  }
+  .navBar {
+    width: 45%;
+    height: 6vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .containNav {
+    top: 70%;
+   
+  }
+  .navBar {
+    width: 75%;
+  }
 }

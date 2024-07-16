@@ -48,6 +48,6 @@
 .buyMeACoffe svg{
   width: 60px;
   height: 60px;
-  fill: white;
+  fill: var(--color-svg);
 }
 
