@@ -62,6 +62,8 @@ const useTxtRotate = (toRotate, period) => {
   }, [toRotate, period]);
 
   return elRef;
+
+  
 };
 
 export default useTxtRotate;

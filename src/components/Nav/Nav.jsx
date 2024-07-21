@@ -42,7 +42,7 @@ export const Nav = () => {
         </a>
 
         <a
-          href="#"
+          href="#Contact"
           className={activeLink === 3 ? styles.active : ''}
           onClick={() => handleClick(3)}
         >

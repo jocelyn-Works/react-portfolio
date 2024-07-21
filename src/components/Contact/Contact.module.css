@@ -1,0 +1,179 @@
+@import "../../vars.css";
+
+.contactContainer{
+  width: 100%;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: row;
+}
+.contain1{
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.containForm{
+  width: 35%;
+  background-color: var(--color-contain);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  padding: 40px;
+  z-index: 1;
+  margin: 4%;
+}
+
+ 
+  textarea{
+    resize: none;
+    margin-bottom: 40px;
+  }
+  .formTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+    font-size: xx-large;
+    font-weight: bold;
+    color:var(--color-inverse);
+  }
+  
+  .formRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .space{
+    width: 10px;
+  }
+  /* Styles existants... */
+
+/* Ajout des nouveaux styles */
+.user-box {
+  position: relative;
+  flex: 1 ;
+}
+
+.user-box input,
+.user-box textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 50px;
+  border: none;
+  border-bottom: 2px solid var(--nav-color);
+  outline: none;
+  background: transparent;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+.user-box textarea {
+  height: auto;
+}
+.user-box input:focus,
+.user-box textarea:focus {
+    border-bottom: 2px solid var(--primary); 
+}
+
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 22px;
+  color: var(--text-color);
+  pointer-events: none;
+  transition: .5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label,
+.user-box textarea:focus ~ label,
+.user-box textarea:valid ~ label {
+  top: -25px;
+  left: 0;
+  color: var(--text-color);
+  font-size: 17px;
+}
+
+  
+  .btnForm{
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .reCaptcha{
+    margin-top: -5px;
+  }
+
+
+  /* -----  button ------- */
+
+  .contactBtn {
+    cursor: pointer;
+    z-index: 30;
+    text-decoration: none;
+    border: none;
+    background-color: var(--primary);
+    color: var(--nav-color);
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 17px 26px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+  }
+    .contactBtn :hover {
+      transform: translateY(-2px);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+  
+    .contactBtn :active {
+      transform: translateY(-2px);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+    @media only screen and (max-width: 1024px) {
+      
+      .containForm{
+        width: 70%;
+      }
+      .reCaptcha {
+          transform:scale(0.70);
+          transform-origin:0 0;
+      }
+    }
+    @media only screen and (max-width: 769px) {
+      .contactContainer{
+        justify-content: center;
+      }
+      .contain1{
+        display: none;
+      }
+      .containForm{
+        width: 80%;
+      }
+      .reCaptcha {
+          transform:scale(0.70);
+          transform-origin:0 0;
+      }
+    }
+  @media only screen and (max-width: 500px) {
+    .reCaptcha {
+        transform:scale(0.17);
+        transform-origin:0 0;
+    }
+  }
+  
+  
+  
+  

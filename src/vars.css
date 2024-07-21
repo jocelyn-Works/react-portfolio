@@ -1,6 +1,7 @@
 :root[data-theme="light"] {
   /* color */
   --color-text: #000000;
+  --text-color: #ffffff;
   --primary: #576cbc;
   --secondary: #19376d;
   --color-dark: #0b2447;
@@ -10,6 +11,9 @@
   --black:black;
   --top-blur:rgba(158, 180, 218, 0.444);
   
+  --color-contain:#04152dda;
+  --color-inverse:  #e0e4ffce;
+
 
   /* fonts */
   --fonts-roboto: "roboto";
@@ -36,6 +40,7 @@
 
 :root[data-theme="dark"] {
   --color-text: #fff;
+  --text-color: #010101;
   --primary: #576cbc;
   --secondary: #19376d;
   --color-dark: #0b2447;
@@ -45,10 +50,13 @@
   --top-blur:rgba(41, 72, 128, 0.7);
   --color-nav:#E0E4FF;
 
+
+  --color-contain:#e0e4ffd2;
+  --color-inverse: #102d56d8;
+  
   /* fonts */
   --fonts-roboto: "roboto";
   --fonts-outfit:"outfit";
-
 
     /* svg */
     --color-svg:#e0e4ffbe;
@@ -71,3 +79,4 @@
     background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
     fill 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+

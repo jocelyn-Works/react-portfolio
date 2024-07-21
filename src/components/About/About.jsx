@@ -142,8 +142,8 @@ export const About = () => {
               </div>
             </div>
           </li>
-            <a href={cv} download="jocelynCv.pdf" className={styles.cvLink}>
               <button className={styles.cvButton} type="button">
+            <a href={cv} download="jocelynCv.pdf" className={styles.cvLink}>
                 <span className={styles.buttonText}>Télécharger mon CV</span>
                 <span className={styles.buttonIcon}>
                   <svg
@@ -158,8 +158,8 @@ export const About = () => {
                     <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
                   </svg>
                 </span>
-              </button>
             </a>
+              </button>
         </ul>
       </div>
     </section>

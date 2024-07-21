@@ -3,7 +3,7 @@
 .container {
   /* position: relative; */
   /* background-color: rgba(80, 80, 80, 0.433); */
-  background-color: rgba(162, 160, 160, 0.433);
+  background-color: var(--color-contain);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: 1;
   border-radius: 15px;
@@ -22,7 +22,7 @@
 }
 
 .title {
-  color: var(--color-text);
+  color: var(--text-color);
   font-size: 35px;
   font-weight: 700;
   letter-spacing: 1.75px;
@@ -40,11 +40,13 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  border: 1px solid #17795E;
-  background-color: #209978;
+  border: 1px solid var(--color-inverse);
+  background-color: var(--color-inverse);
   overflow: hidden;
   border: 1.5px solid var(--grey);
   border-radius: 10px;
+  margin-top: 5vh;
+  z-index: 100;
 }
 
 .cvButton, .buttonIcon, .buttonText {
@@ -53,7 +55,8 @@
 
 .cvButton .buttonText {
   transform: translateX(22px);
-  color: #fff;
+  color: var(--color-text);
+  margin-left: 15px;
   font-size: large;
   font-weight: bold;
 }
@@ -64,7 +67,7 @@
   right: 0;
   height: 100%;
   width: 45px;
-  background-color: #17795E;
+  background-color: var(--color-inverse);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -76,11 +79,11 @@
   width: 30px;
   margin-top: 25px;
   align-items: center;
-  fill: #fff;
+  fill: var(--color-text);
 }
 
 .cvButton:hover {
-  background: #17795E;
+  background: var(--color-inverse);
 }
 
 .cvButton:hover .buttonText {
@@ -93,11 +96,11 @@
 }
 
 .cvButton:active .buttonIcon {
-  background-color: #146c54;
+  background-color: var(--color-inverse);
 }
 
 .cvButton:active {
-  border: 1px solid #146c54;
+  border: 1px solid var(--color-inverse);
 }
 
 .cvLink {
@@ -139,10 +142,10 @@ margin-bottom: 2rem;
 
 
 .aboutItems {
-  color: var(--color-text);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 20px;
 }
 
 .aboutItem {
@@ -151,7 +154,7 @@ margin-bottom: 2rem;
   align-items: center;
   border-radius: 20px;
   list-style: none;
-  padding: 8px;
+  /* padding: 8px; */
   background-image: linear-gradient(
     90deg,
     rgba(165, 215, 232, 0.42) 0%,
@@ -189,7 +192,7 @@ margin-bottom: 2rem;
     /* z-index: -1; */
 }
 .aboutlogo img{
-    max-width: 100px;
+    max-width: 70px;
     height: 100px;
     object-fit: contain; 
     margin: 5px 10px 5px 5px;
