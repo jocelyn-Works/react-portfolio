@@ -3,6 +3,8 @@ import styles from "./Contact.module.css";
 import Swal from "sweetalert2";
 import ReCAPTCHA from "react-google-recaptcha";
 
+import { motion, useScroll } from "framer-motion";
+
 export const Contact = () => {
   const [capVal, setCapVal] = useState(null);
   const [formData, setFormData] = useState({
@@ -129,8 +131,24 @@ export const Contact = () => {
     }));
   };
 
+  // ---------- animation  ----------  //
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"]
+  });
+  // ---------------------------- //
+
+
   return (
-    <section id="Contact" className={styles.container}>
+    <motion.div
+    id="Contact"
+    ref={ref}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }} >
+    <section  className={styles.container}>
       <div className={styles.contactContainer}>
         <div className={styles.contain1}></div>
         <div className={styles.containForm}>
@@ -204,5 +222,6 @@ export const Contact = () => {
         </div>
       </div>
     </section>
+    </motion.div>
   );
 };
