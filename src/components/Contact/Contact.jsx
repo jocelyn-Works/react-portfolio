@@ -135,27 +135,27 @@ export const Contact = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"]
+    offset: ["0 1", "4.5 1"],
   });
   // ---------------------------- //
 
-
   return (
-    <motion.div
-    id="Contact"
-    ref={ref}
-      style={{
-        scale: scrollYProgress,
-        opacity: scrollYProgress,
-      }} >
-    <section  className={styles.container}>
+    <section className={styles.container} id="Contact">
       <div className={styles.contactContainer}>
         <div className={styles.contain1}></div>
         <div className={styles.containForm}>
           <form onSubmit={onSubmit}>
-            <div className={styles.formTitle}>
-              <h2>Contacter Moi</h2>
-            </div>
+            <motion.div
+              ref={ref}
+              style={{
+                scale: scrollYProgress,
+                opacity: scrollYProgress,
+              }}
+            >
+              <div className={styles.formTitle}>
+                <h2>Contacter Moi</h2>
+              </div>
+            </motion.div>
 
             <div className={styles.formRow}>
               <div className={styles.userBox}>
@@ -222,6 +222,5 @@ export const Contact = () => {
         </div>
       </div>
     </section>
-    </motion.div>
   );
 };

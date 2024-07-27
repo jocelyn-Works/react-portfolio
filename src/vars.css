@@ -10,6 +10,9 @@
   --grey:grey;
   --black:black;
   --top-blur:rgba(158, 180, 218, 0.444);
+
+  --white:white;
+  
   
   --color-contain:#04152dda;
   --color-inverse:  #e0e4ffce;
@@ -49,6 +52,8 @@
   --black:black;
   --top-blur:rgba(41, 72, 128, 0.7);
   --color-nav:#E0E4FF;
+
+  --white:white;
 
 
   --color-contain:#e0e4ffd2;

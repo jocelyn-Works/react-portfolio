@@ -2,7 +2,6 @@
 
 .contactContainer{
   width: 100%;
-  /* margin-bottom: 10rem; */
   display: flex;
   flex-direction: row;
 }
@@ -15,9 +14,9 @@
   background-color: var(--color-contain);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
-  padding: 40px;
+  padding: 0px 40px;
   z-index: 1;
-  margin: 4%;
+  margin-bottom:4rem;
 }
 
  
@@ -25,12 +24,12 @@
     resize: none;
     margin-bottom: 40px;
   }
-  .formTitle{
+  .formTitle h2{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 4rem 0;
-    font-size: xx-large;
+    margin: 2rem 0;
+    font-size: 4rem;
     font-weight: bold;
     color:var(--color-inverse);
   }
@@ -45,9 +44,7 @@
   .space{
     width: 10px;
   }
-  /* Styles existants... */
-
-/* Ajout des nouveaux styles */
+ 
 .user-box {
   position: relative;
   flex: 1 ;
@@ -68,7 +65,10 @@
   transition: border-color 0.3s ease;
 }
 .user-box textarea {
-  height: auto;
+  padding: 0px 0;
+  
+
+  /* height:55px; */
 }
 .user-box input:focus,
 .user-box textarea:focus {
@@ -97,17 +97,27 @@
   font-size: 17px;
 }
 
+.user-box textarea:focus ~ label,
+.user-box textarea:valid ~ label{
+  top: -35px;
+}
+
   
   .btnForm{
+    cursor: pointer;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
+  .btnForm button{
+    cursor: pointer;
+    width: 35%;
+  }
   
   .reCaptcha{
-    margin-top: -5px;
+    margin-top: -10px;
   }
 
 
@@ -127,7 +137,7 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
+    margin-bottom: 20px;
   }
     .contactBtn :hover {
       transform: translateY(-2px);

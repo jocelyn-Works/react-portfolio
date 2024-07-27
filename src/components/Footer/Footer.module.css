@@ -1,6 +1,8 @@
 @import "../../vars.css";
 
 .container {
+  position: relative;
+  top: -25px;
   width: 100%;
   color: var(--color-text);
   background-color: var(--color-secondary);
@@ -18,8 +20,9 @@
   width: 60px;
   height: 60px;
   fill: var(--color-svg);
-  
-  
+}
+.social svg:hover{
+  fill: var(--color-contain);
 }
 .cardSocial{
   border: 1.5px solid var(--color-svg);
